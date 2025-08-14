@@ -175,20 +175,6 @@ useEffect(() => {
           </li>
           <li>
             <Link
-              to="services"
-              smooth={true}
-              duration={500}
-              spy={true}
-              offset={-70}
-              onClick={() => setIsOpen(false)}
-              className="hover:underline hover:font-bold transition-all cursor-pointer"
-              activeClass="font-bold underline"
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
               to="resume"
               smooth={true}
               duration={500}

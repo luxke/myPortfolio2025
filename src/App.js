@@ -55,7 +55,7 @@ function App() {
     
     <div className="w-full md:w-1/2">
       <img
-        src="/pic1.jpg"
+        src="/backgroundimg.jpg"
         alt="Felix Kipkemboi"
         className="w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out"
       />
