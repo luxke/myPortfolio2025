@@ -21,17 +21,16 @@ useEffect(() => {
       setIsInHome(isCurrentlyInHome);
     }
 
-    // Always show navbar when at the very top (0px)
     if (currentScrollY === 0) {
       setIsVisible(true);
     }
-    // Hide while scrolling in Home
+   
     else if (currentScrollY > lastScrollY && isInHome) {
       setIsVisible(false);
     } else if (currentScrollY < lastScrollY && isInHome) {
       setIsVisible(false);
     } else {
-      // Show outside of Home
+    
       setIsVisible(true);
     }
     setLastScrollY(currentScrollY);
@@ -52,14 +51,12 @@ useEffect(() => {
         Fl
       </div>
 
-      {/* Hamburger Icon (mobile only) */}
       <div className="md:hidden">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-sm font-medium  flex-1 justify-center ml-10">
           <li>
             <Link
@@ -128,7 +125,6 @@ useEffect(() => {
           </li>
         </ul>
 
-      {/* Mobile Menu */}
      {isOpen && (
         <ul className="absolute top-16 left-0 w-full flex flex-col items-end px-6 space-y-4 py-4 md:hidden">
           <li>

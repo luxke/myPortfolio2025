@@ -286,7 +286,7 @@ function App() {
   <h2 className="text-4xl font-bold mb-6 text-center">Let's Connect 💬</h2>
 
   <div className="text-center text-lg mb-6 space-y-2">
-    <p>Email: <a href="mailto:your@email.com" className="text-indigo-400 hover:underline">kipkemboifelix576@gmail.com</a></p>
+    <p>Email: <a href="mailto:kipkemboifelix576@gmail.com" className="text-indigo-400 hover:underline">kipkemboifelix576@gmail.com</a></p>
     <p>Phone: <span className="text-indigo-400">+254 112 402 204</span></p>
     <p>Location: <span className="text-indigo-400">Nairobi, Kenya 🇰🇪</span></p>
   </div>
