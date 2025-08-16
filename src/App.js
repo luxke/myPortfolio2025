@@ -42,7 +42,7 @@ function App() {
           }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">I'm Felix Luxke</h1>
-          <h2 className="text-2xl sm:text-3xl mt-4 font-semibold">A Front-end Developer</h2>
+          <h2 className="text-2xl sm:text-3xl mt-4 font-semibold">A Software Developer</h2>
         </section>
       </div>
       <div className="h-32 bg-gradient-to-b from-transparent to-gray-100 dark:to-gray-900"></div>
@@ -63,7 +63,7 @@ function App() {
 
     <div className="w-full md:w-1/2 text-center md:text-left">
       <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-        👨‍💻 About Me
+        About Me
       </h2>
       <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         I’m <span className="font-semibold text-indigo-600 dark:text-indigo-400">Felix Kipkemboi</span>, a creative software engineer who turns ideas into stunning digital experiences. I blend code and design to build intuitive, clean, and performance-driven interfaces.
@@ -81,13 +81,13 @@ function App() {
           📄 Download CV
         </a>
         <div className="flex gap-4">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-2xl transition">
+          <a href="https://github.com/luxke" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-2xl transition">
             <i className="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-2xl transition">
+          <a href="https://www.linkedin.com/in/felix-kipkemboi-618916303/" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-2xl transition">
             <i className="fab fa-linkedin"></i>
           </a>
-          <a href="mailto:your@email.com" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-2xl transition">
+          <a href="mailto:kipkemboifelix576@gmail.com" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-2xl transition">
             <i className="fas fa-envelope"></i>
           </a>
         </div>
@@ -118,14 +118,16 @@ function App() {
   </div>
 </section>
 
-      <section
+     <section
   id="portfolio"
   className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 p-8"
 >
   <div className="max-w-6xl mx-auto relative">
-    <h1 className="text-4xl font-extrabold text-center text-gray-800">Portfolio</h1>
+    <h1 className="text-4xl font-extrabold text-center text-gray-800">
+      Portfolio
+    </h1>
     <p className="text-lg text-center text-gray-600 mt-10">
-      Hover near the edges to explore my proudest creations 💎✨
+      Hover near the edges to explore my proudest creations
     </p>
 
     <div
@@ -147,9 +149,40 @@ function App() {
         id="slider"
         className="flex overflow-x-auto gap-6 px-4 scroll-smooth scrollbar-hide snap-x snap-mandatory"
       >
-        {[1, 2, 3, 4, 5].map((id, index) => (
+        {[
+          {
+            id: 1,
+            title: "Portfolio Website",
+            description: "Integrated Portfolio showcasing my bead arts.",
+            image: "/Project1.png",
+          },
+          {
+            id: 2,
+            title: "E-Commerce poster",
+            description: "A poster I designed advertising  a vacancy for a general manager  .",
+            image: "/Project2.png",
+          },
+          {
+            id: 3,
+            title: "E-Commerce poster",
+            description: "Another poster advertising  a vacancy for a general manager.",
+            image: "/Project3.png",
+          },
+          {
+            id: 4,
+            title: "E-Commerce poster",
+            description: "E commerce poster advertising my bead art.",
+            image: "/Project4.png",
+          },
+          {
+            id: 5,
+            title: "Card",
+            description: "A card I designed for my bead art.",
+            image: "/Project5.png",
+          },
+        ].map((project) => (
           <div
-            key={id}
+            key={project.id}
             className="bg-white w-72 shrink-0 rounded-xl shadow-lg overflow-hidden snap-center transform transition-transform duration-500 ease-in-out"
             style={{
               transformOrigin: "center",
@@ -163,17 +196,15 @@ function App() {
             }}
           >
             <img
-              src={`/project${id}.jpg`}
-              alt={`Project ${id}`}
+              src={project.image}
+              alt={project.title}
               className="w-full h-48 object-cover"
             />
             <div className="p-5">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
-                Project {id}
+                {project.title}
               </h2>
-              <p className="text-sm text-gray-600">
-                A cool project description goes here. Make it fun and brief!
-              </p>
+              <p className="text-sm text-gray-600">{project.description}</p>
             </div>
           </div>
         ))}
@@ -188,7 +219,7 @@ function App() {
 >
   <h2 className="text-4xl font-bold mb-4">Resume 📄</h2>
   <p className="text-gray-700 text-lg max-w-2xl text-center mb-12">
-    Here's a quick summary of my journey so far — my education, experience, and the skills that fuel my passion for creating awesome digital experiences.
+    Here is my education experience and the skills that fuel my passion for creating awesome digital experiences.
   </p>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full">
@@ -262,7 +293,7 @@ function App() {
 
   <div className="flex gap-6 mt-6">
     <a
-      href="https://github.com/yourusername"
+      href="https://github.com/luxke"
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-300 hover:text-indigo-400 text-3xl transition"
@@ -270,7 +301,7 @@ function App() {
       <i className="fab fa-github"></i>
     </a>
     <a
-      href="https://linkedin.com/in/yourusername"
+      href="https://www.linkedin.com/in/felix-kipkemboi-618916303/"
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-300 hover:text-indigo-400 text-3xl transition"
@@ -278,7 +309,7 @@ function App() {
       <i className="fab fa-linkedin"></i>
     </a>
     <a
-      href="mailto:your@email.com"
+      href="mailto:kipkemboifelix576@gmail.com"
       className="text-gray-300 hover:text-indigo-400 text-3xl transition"
     >
       <i className="fas fa-envelope"></i>
@@ -296,7 +327,7 @@ function App() {
 
   <div className="mt-16 text-sm text-gray-400 text-center">
     <p>Designed & built by <span className="text-indigo-400 font-semibold">FELIX KIPKEMBOI | LUXKE SOLUTIONS</span> © {new Date().getFullYear()}</p>
-    <p className="mt-2">Made with Love , React & Tailwind CSS</p>
+    <p className="mt-2">Made with Love , React & Tailwind CSS | All Rights Reserved</p>
   </div>
 </section>
 
