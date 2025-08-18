@@ -6,14 +6,6 @@ function App() {
   const [heroOpacity, setHeroOpacity] = useState(1);
   const sliderRef = useRef(null);
 
-  const scroll = (direction) => {
-    const { current } = sliderRef;
-    if (direction === 'left') {
-      current.scrollBy({ left: -300, behavior: 'smooth' });
-    } else {
-      current.scrollBy({ left: 300, behavior: 'smooth' });
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
