@@ -4,9 +4,7 @@ import background from './assets/backgroundimg.jpg';
 
 function App() {
   const [heroOpacity, setHeroOpacity] = useState(1);
-  const sliderRef = useRef(null);
-
-
+ 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
